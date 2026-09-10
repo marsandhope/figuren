@@ -153,6 +153,13 @@ dialog::backdrop{background:rgba(4,8,10,.86);backdrop-filter:blur(6px)}
 .d-blaettern{display:flex;justify-content:space-between;gap:1rem;margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--linie)}
 .d-blaettern button{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2)}
 .d-blaettern button:hover{color:#fff}
+/* Gruppenbild über die ganze Breite */
+.gruppenbild{margin:2rem 0 0}
+.gruppenbild .bild-rahmen{display:block}
+.gruppenbild img{width:100%;cursor:zoom-in}
+.gruppenbild .ki{right:clamp(10px,2vw,24px);bottom:clamp(10px,2vw,22px)}
+.gruppenbild figcaption{font-family:var(--mono);font-size:.72rem;line-height:1.6;color:var(--text2);
+  max-width:var(--maxw);margin:.9rem auto 0;padding:0 clamp(16px,4vw,48px)}
 /* Bildergalerien */
 .galerie{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(12px,1.6vw,20px)}
 .galerie figure{margin:0;display:flex;flex-direction:column}
@@ -189,7 +196,7 @@ dialog::backdrop{background:rgba(4,8,10,.86);backdrop-filter:blur(6px)}
 <body>
 <div class="hintergrund"><div class="koernung"></div></div>
 <header class="nav"><a class="marke" href="#start">Figuren<span>schau</span></a><nav>
-<a href="#aufstellung">Aufstellung</a><a href="#figuren">Alle Figuren</a><a href="#karte">Auf der Karte</a>
+<a href="#aufstellung">Aufstellung</a><a href="#alle">Alle zusammen</a><a href="#figuren">Alle Figuren</a><a href="#karte">Auf der Karte</a>
 <a href="#werkzeug">Werkzeuge</a><a href="#werkstatt">Werkstatt</a><a href="#stand">Stand</a>
 <a class="zurueck" href="https://marsandhope.github.io/">Mars &amp; Hope →</a></nav></header>
 <main>
@@ -241,6 +248,28 @@ auf dem Boden stehen. Tillus überragt die Reihe um mehr als das Zehnfache desse
 </div>
 </section>
 
+<section class="abschnitt" id="alle">
+<div class="innen abschnitt-kopf reveal">
+<p class="kicker">Alle zusammen</p>
+<h2>Einmal antreten, bitte</h2>
+<div class="lesen"><p>Einmal alle auf einem Bild: zweiundfünfzig Körper, in sechs Reihen nach Größe
+aufgestellt, die Kleinsten vorn, Tillus und die großen Rahmen hinten – und alle winken. Wer keinen
+Winke-Clip besitzt, zeigt die Bewegung, die er hat: Tillus fährt den Kranarm aus, RIEGEL klappt die
+Deflektoren, CANTOR staunt, MORA sieht sich um.</p>
+<p>Zusammengesetzt ist daran nichts. Eine Kamera, eine Aufnahme, aufgestellt und ausgelöst im laufenden
+Editor, auf demselben Boden, auf dem die Figuren auch im Spiel stehen. FUNKE fehlt in der Reihe, weil er
+LUMENs Körper trägt und dort schon steht.</p></div>
+</div>
+<figure class="gruppenbild reveal">
+<span class="bild-rahmen"><img loading="lazy" src="bilder/karte/gruppe.webp"
+ alt="Alle zweiundfünfzig gebauten Körper stehen in sechs Reihen vor dem Dorf der Gezeitenflechter und winken"
+ data-gross="bilder/karte/gruppe.webp" data-text="Alle zweiundfünfzig Körper vor dem Dorf der Gezeitenflechter">
+<span class="ki" title="KI-generiertes Bild">KI</span></span>
+<figcaption>Zweiundfünfzig Körper vor dem Dorf der Gezeitenflechter, sechs Reihen nach Größe · eine Aufnahme aus dem
+laufenden Unreal-Editor auf L_Mars_Drei_Doerfer_V7</figcaption>
+</figure>
+</section>
+
 <section class="abschnitt" id="figuren">
 <div class="innen">
 <div class="abschnitt-kopf reveal">
@@ -271,7 +300,10 @@ Ein Klick öffnet die vier Ansichten, das Originalblatt daneben und alles, was d
 <div class="lesen"><p>Diese sechs Aufnahmen stammen nicht aus einem Renderstudio, sondern aus dem laufenden
 Editor: die Figuren stehen zwischen den Kuppeln auf <span class="mono">L_Mars_Drei_Doerfer_V7</span>,
 mit dem Boden unter den Füßen, den sie auch im Spiel haben. Ein Lauf von fünfundsiebzig Sekunden hat für
-siebenunddreißig Bewohnersteuerungen Wegstrecken, Ankünfte und Bodenkontakt mitgeschrieben.</p></div>
+siebenunddreißig Bewohnersteuerungen Wegstrecken, Ankünfte und Bodenkontakt mitgeschrieben.</p>
+<p>Für die Aufnahme dreht sich jede Figur zur Kamera, und die Kamera geht dorthin, wo die tiefe
+Nachmittagssonne herkommt. Vorher stand sie gegen das Licht – dann waren die Figuren schwarze
+Umrisse vor einem schönen Himmel.</p></div>
 </div>
 <div class="galerie reveal"><figure><span class="bild-rahmen"><img loading="lazy" src="bilder/karte/Unreal_aren.webp" alt="AREN auf der Dorfkarte in Unreal" data-gross="bilder/karte/Unreal_aren.webp" data-text="AREN auf L_Mars_Drei_Doerfer_V7"><span class="ki" title="KI-generiertes Bild">KI</span></span><figcaption>AREN auf L_Mars_Drei_Doerfer_V7</figcaption></figure><figure><span class="bild-rahmen"><img loading="lazy" src="bilder/karte/Unreal_ion.webp" alt="ION auf der Dorfkarte in Unreal" data-gross="bilder/karte/Unreal_ion.webp" data-text="ION auf L_Mars_Drei_Doerfer_V7"><span class="ki" title="KI-generiertes Bild">KI</span></span><figcaption>ION auf L_Mars_Drei_Doerfer_V7</figcaption></figure><figure><span class="bild-rahmen"><img loading="lazy" src="bilder/karte/Unreal_rhea.webp" alt="RHEA auf der Dorfkarte in Unreal" data-gross="bilder/karte/Unreal_rhea.webp" data-text="RHEA auf L_Mars_Drei_Doerfer_V7"><span class="ki" title="KI-generiertes Bild">KI</span></span><figcaption>RHEA auf L_Mars_Drei_Doerfer_V7</figcaption></figure><figure><span class="bild-rahmen"><img loading="lazy" src="bilder/karte/Unreal_riegel.webp" alt="RIEGEL auf der Dorfkarte in Unreal" data-gross="bilder/karte/Unreal_riegel.webp" data-text="RIEGEL auf L_Mars_Drei_Doerfer_V7"><span class="ki" title="KI-generiertes Bild">KI</span></span><figcaption>RIEGEL auf L_Mars_Drei_Doerfer_V7</figcaption></figure><figure><span class="bild-rahmen"><img loading="lazy" src="bilder/karte/Unreal_rusk.webp" alt="RUSK auf der Dorfkarte in Unreal" data-gross="bilder/karte/Unreal_rusk.webp" data-text="RUSK auf L_Mars_Drei_Doerfer_V7"><span class="ki" title="KI-generiertes Bild">KI</span></span><figcaption>RUSK auf L_Mars_Drei_Doerfer_V7</figcaption></figure><figure><span class="bild-rahmen"><img loading="lazy" src="bilder/karte/Unreal_tillus.webp" alt="TILLUS auf der Dorfkarte in Unreal" data-gross="bilder/karte/Unreal_tillus.webp" data-text="TILLUS auf L_Mars_Drei_Doerfer_V7"><span class="ki" title="KI-generiertes Bild">KI</span></span><figcaption>TILLUS auf L_Mars_Drei_Doerfer_V7</figcaption></figure></div>
 </div>
